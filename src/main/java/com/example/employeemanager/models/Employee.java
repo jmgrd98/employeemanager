@@ -18,12 +18,12 @@ public class Employee implements Serializable {
     private String phoneNumber;
     private String imageUrl;
     @Column(nullable = false, updatable = false)
-    private Integer employeeCode;
+    private String employeeCode;
 
     public Employee() {
     }
 
-    public Employee(String name, String email, String jobTitle, String phoneNumber, String imageUrl, Integer employeeCode) {
+    public Employee(String name, String email, String jobTitle, String phoneNumber, String imageUrl, String employeeCode) {
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
@@ -80,11 +80,11 @@ public class Employee implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public Integer getEmployeeCode() {
+    public String getEmployeeCode() {
         return employeeCode;
     }
 
-    public void setEmployeeCode(Integer employeeCode) {
+    public void setEmployeeCode(String employeeCode) {
         this.employeeCode = employeeCode;
     }
 }
